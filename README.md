@@ -8,17 +8,21 @@ It will create the following:
 
 ##  Initial Setup
 ### Setup and install dependencies
+```
 pyenv local 3.11.8
 python -m venv env
 source env/bin/activate
 pip install -r requirements.in
 pip freeze > requirements.txt
+```
 
 ### Create a new project with a new app
+```
 mkdir sofia-health
 django-admin startproject rootsite sofia-health
 cd sofia-health
 python manage.py startapp appointments
+```
 
 ### Run the server
 python manage.py runserver
@@ -27,5 +31,7 @@ python manage.py runserver
 python manage.py startapp appointments
 
 ## Create a new model
+```
 python manage.py makemigrations
 python manage.py migrate
+```
