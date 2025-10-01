@@ -53,3 +53,11 @@ The customer fills out the appointment form and submits it. After submitting the
 ### Test cards included here for convenience
 - Success: 4242 4242 4242 4242
 - Declined: 4000 0000 0000 0002
+
+
+## Part 2
+If this appointment feature had to handle thousands of requests per day the changes that I would address are to setup the application to run in the AWS environment, or preferred cloud provider like Azure or GCP.
+
+To do this I would first ensure that the database is configured to a platform as a service, or managed database service, like AWS RDS, Azure Database for PostgreSQL, or Google Cloud SQL (Spanner if Global scale is required). Then after this I would look to run this Django application on AWS ECS containers or equivalent on the preferred cloud provider so that the application can scale horizontally and handle the projected amount of requests. By making these first two changes the application will be more resilient to high traffic and more reliable.
+
+I would communicate progress through ongoing slack updates, or the preferred messaging app by the company. In these updates I would likely often include screenshots and/or video recordings. When communicating with a non-technical team member include similies or metaphors where I can and keep it simple and to the point. Blockers would be communicated with their impact, what options are available to resolve the blocker, and my personal recommendation.
