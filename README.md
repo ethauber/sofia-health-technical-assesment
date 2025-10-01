@@ -26,12 +26,3 @@ python manage.py startapp appointments
 
 ### Run the server
 python manage.py runserver
-
-## Create a new app
-python manage.py startapp appointments
-
-## Create a new model
-```
-python manage.py makemigrations
-python manage.py migrate
-```
