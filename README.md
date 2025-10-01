@@ -24,5 +24,18 @@ cd sofia-health
 python manage.py startapp appointments
 ```
 
+### Create and run migration for new appointments model
+```
+python manage.py makemigrations appointments
+python manage.py migrate
+```
+
+#### Test for the model
+```
+python manage.py test appointments
+```
+
 ### Run the server
+```
 python manage.py runserver
+```
