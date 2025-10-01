@@ -22,5 +22,5 @@ from appointments import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('appointments/', include('appointments.urls')),
-    path('', views.appoinment_form_view, name='home'),
+    path('', views.appointment_form_view, name='home'),
 ]

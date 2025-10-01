@@ -35,7 +35,21 @@ python manage.py migrate
 python manage.py test appointments
 ```
 
+### Retrieve stripe keys
+Signup for a stripe account and retrieve the publishable and secret keys.
+```
+export STRIPE_PUBLISHABLE_KEY=<your_publishable_key>
+export STRIPE_SECRET_KEY=<your_secret_key>
+```
+
 ### Run the server
 ```
 python manage.py runserver
 ```
+
+## Stripe integration explanation
+The customer fills out the appointment form and submits it. After submitting the appointment form the customer is then redirected to the payment page with the appointment details. At this point the customer then clicks the pay with stripe button and is redirected to the stripe checkout page. The customer then either enters valid payment and pays the fee or cancels the payment. Depending on the customer's choice, the customer is redirected to the designated success or cancel page.
+  
+### Test cards included here for convenience
+- Success: 4242 4242 4242 4242
+- Declined: 4000 0000 0000 0002
