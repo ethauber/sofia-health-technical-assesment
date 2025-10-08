@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Booked - Sofia Health</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .success-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .success-icon {
+            font-size: 60px;
+            color: #27ae60;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #27ae60;
+            margin-bottom: 20px;
+        }
+        .appointment-details {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+            text-align: left;
+        }
+        .detail-row {
+            margin-bottom: 10px;
+        }
+        .label {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="success-container">
+        <div class="success-icon">✓</div>
+        <h1>Appointment Booked Successfully!</h1>
+
+        <div class="appointment-details">
+            <div class="detail-row">
+                <span class="label">Provider:</span> {{ appointment.provider_name }}
+            </div>
+            <div class="detail-row">
+                <span class="label">Date & Time:</span> {{ appointment.appointment_time|date:"F d, Y \a\t g:i A" }}
+            </div>
+            <div class="detail-row">
+                <span class="label">Email:</span> {{ appointment.client_email }}
+            </div>
+            <div class="detail-row">
+                <span class="label">Appointment ID:</span> {{ appointment.id }}
+            </div>
+        </div>
+
+        <p><a href="{% url 'book_appointment' %}">Book Another Appointment</a></p>
+    </div>
+</body>
+</html>
