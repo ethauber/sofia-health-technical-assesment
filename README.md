@@ -1,4 +1,3 @@
-# a59ae98d8bf64c45a0c306ff2541f5e6
 # Purpose
 To build a simple Django app that demonstrates the use of Django and Stripe.
 It will create the following:
